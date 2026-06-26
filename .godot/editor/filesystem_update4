@@ -2,3 +2,4 @@ res://Scenes/player.tscn
 res://Scripts/player.gd
 res://Scenes/main.tscn
 res://Scenes/enemy.tscn
+res://Scripts/killzone.gd

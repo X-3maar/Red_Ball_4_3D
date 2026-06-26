@@ -57,7 +57,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9103878, 0.413756, 0, -0.413756, 0.9103878
 script = ExtResource("2_bo1nx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone" unique_id=1740543518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.461462, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -38.00889, 0)
 shape = SubResource("WorldBoundaryShape3D_bo1nx")
 
 [node name="group" type="Node3D" parent="." unique_id=1185997915]
@@ -309,3 +309,5 @@ transform = Transform3D(-6.556708e-07, 10, 0, -15, -4.371139e-07, 0, 0, 0, 30, 0
 height = 1.4648438
 sides = 20
 material = SubResource("StandardMaterial3D_6bp64")
+
+[connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
