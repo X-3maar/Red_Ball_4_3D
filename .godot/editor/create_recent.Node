@@ -1,5 +1,8 @@
+AnimatableBody3D
 Node3D
+Area3D
+CollisionShape3D
+CSGBox3D
+RigidBody3D
 CSGCylinder3D
 CharacterBody3D
-CollisionShape3D
-Area3D

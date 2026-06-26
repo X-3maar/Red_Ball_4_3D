@@ -3,3 +3,6 @@ res://Scripts/player.gd
 res://Scenes/main.tscn
 res://Scenes/enemy.tscn
 res://Scripts/killzone.gd
+res://Scenes/box.tscn
+res://Scripts/move.gd
+res://Scripts/stop.gd

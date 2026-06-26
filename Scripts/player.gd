@@ -30,13 +30,12 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("move_left", "move_right", "move_front", "move_back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var speed := Vector3(velocity.x,0,velocity.z)
 	dir = dir.move_toward(direction,10.0*delta)
 	if dir:
 
-		temp = dir.length() * SPEED * delta
 		
 		velocity.x = move_toward(velocity.x,dir.x * SPEED, 20.0 * delta) 
-		ball.global_rotate(Vector3.UP.cross(dir.normalized()), temp/ radius)
 
 
 		velocity.z = move_toward(velocity.z,dir.z * SPEED, 20.0 * delta)
@@ -44,5 +43,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, 1.0 * delta)
 		velocity.z = move_toward(velocity.z, 0, 1.0 * delta)
-
+	if speed.length():
+		temp = delta * speed.length()
+		ball.global_rotate(Vector3.UP.cross(speed.normalized()),temp / radius)
 	move_and_slide()
