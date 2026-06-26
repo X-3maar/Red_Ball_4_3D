@@ -1,11 +1,12 @@
 extends CharacterBody3D
 
 const radius = 0.5
-const SPEED = 5.0
-var dis = 0
-const JUMP_VELOCITY = 4.5
+const SPEED = 8
+var temp = 0
+const JUMP_VELOCITY = 10
 @onready var neck: SpringArm3D = $SpringArm3D
 @onready var ball: Node3D = $Ball
+@onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -30,15 +31,15 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_front", "move_back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		dis = direction * SPEED * delta
-		velocity.x = direction.x * SPEED 
-		
+		temp = SPEED * delta
+		velocity.x = move_toward(velocity.x,direction.x * SPEED, 10.0 * delta) 
+		ball.global_rotate(Vector3.UP.cross(direction), temp/ radius)
 
-		velocity.z = direction.z * SPEED
-		
+
+		velocity.z = move_toward(velocity.z,direction.z * SPEED, 10.0 * delta)
 		
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, 10.0 * delta)
+		velocity.z = move_toward(velocity.z, 0, 10.0 * delta)
 
 	move_and_slide()
