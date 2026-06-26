@@ -6,3 +6,5 @@ res://Scripts/killzone.gd
 res://Scenes/box.tscn
 res://Scripts/move.gd
 res://Scripts/stop.gd
+res://Global.gd
+res://Scripts/box.gd

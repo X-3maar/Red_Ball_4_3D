@@ -1,8 +1,9 @@
 extends CharacterBody3D
 
 const radius = 0.5
-const SPEED = 8
+const SPEED = 10
 var temp = 0
+var free = false
 const JUMP_VELOCITY = 10
 @onready var neck: SpringArm3D = $SpringArm3D
 @onready var ball: Node3D = $Ball
@@ -13,11 +14,17 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		rotate_y(deg_to_rad(-event.relative.x * 0.4))
-		neck.rotate_x(deg_to_rad(-event.relative.y * 0.4))
-		neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-45), deg_to_rad(45))
+		if !free:
+			rotate_y(deg_to_rad(-event.relative.x * 0.4))
+			neck.rotate_x(deg_to_rad(-event.relative.y * 0.4))
+			neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-45), deg_to_rad(45))
 func _physics_process(delta: float) -> void:
-	
+	if Input.is_action_just_pressed("free") and !free:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		free = true
+	elif Input.is_action_just_pressed("free") and free:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		free = false
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
