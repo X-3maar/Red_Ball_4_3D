@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bem5vdrbmlvaq"]
+
+[ext_resource type="Script" uid="uid://4ln454j8sgay" path="res://Scripts/player.gd" id="1_v0iea"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
+
+[sub_resource type="TextMesh" id="TextMesh_vgqql"]
+text = "("
+font_size = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkybt"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_v0iea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvnsp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6t5aa"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_f60y1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0iea"]
+albedo_color = Color(1.9001008, 0.49168688, 0.51516014, 1)
+metallic = 1.0
+roughness = 0.0
+
+[node name="RB" type="CharacterBody3D" unique_id=1063477705]
+script = ExtResource("1_v0iea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=189120946]
+shape = SubResource("SphereShape3D_cvnsp")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=540126470]
+spring_length = 2.0
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=732389418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1621773, 2.2149827)
+fov = 100.0
+
+[node name="Ball" type="Node3D" parent="." unique_id=2012815095]
+
+[node name="Mouth" type="MeshInstance3D" parent="Ball" unique_id=695715538]
+transform = Transform3D(-4.371139e-08, -1, 0, 0.9659258, -4.222196e-08, -0.25881904, 0.25881904, -1.131334e-08, 0.9659258, -0.037979707, 0.0004490018, -0.47733912)
+mesh = SubResource("TextMesh_vgqql")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkybt")
+
+[node name="Eyeball2" type="MeshInstance3D" parent="Ball" unique_id=1556154468]
+transform = Transform3D(-0.2, 0, 0, 0, 0.19318517, 0.05176381, 0, -0.05176381, 0.19318517, 0.16, 0.258, -0.34832558)
+mesh = SubResource("SphereMesh_v0iea")
+
+[node name="Pupil" type="MeshInstance3D" parent="Ball/Eyeball2" unique_id=1161121433]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.19420326, -0.27986157)
+mesh = SubResource("SphereMesh_v0iea")
+surface_material_override/0 = SubResource("StandardMaterial3D_cvnsp")
+
+[node name="Luster" type="MeshInstance3D" parent="Ball/Eyeball2/Pupil" unique_id=131793662]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.15, 0.208, -0.132)
+mesh = SubResource("SphereMesh_v0iea")
+surface_material_override/0 = SubResource("StandardMaterial3D_6t5aa")
+
+[node name="Eyeball" type="MeshInstance3D" parent="Ball" unique_id=2053213876]
+transform = Transform3D(0.2, 0, 0, 0, 0.19318517, 0.05176381, 0, -0.05176381, 0.19318517, -0.16, 0.25768173, -0.3479217)
+mesh = SubResource("SphereMesh_v0iea")
+
+[node name="Pupil" type="MeshInstance3D" parent="Ball/Eyeball" unique_id=1561914899]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.19420326, -0.27986157)
+mesh = SubResource("SphereMesh_v0iea")
+surface_material_override/0 = SubResource("StandardMaterial3D_cvnsp")
+
+[node name="Luster" type="MeshInstance3D" parent="Ball/Eyeball/Pupil" unique_id=797402587]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.15, 0.208, -0.132)
+mesh = SubResource("SphereMesh_v0iea")
+surface_material_override/0 = SubResource("StandardMaterial3D_6t5aa")
+
+[node name="Body" type="MeshInstance3D" parent="Ball" unique_id=1761193150]
+mesh = SubResource("SphereMesh_f60y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_v0iea")
