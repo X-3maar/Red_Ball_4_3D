@@ -8,3 +8,5 @@ res://Scripts/move.gd
 res://Scripts/stop.gd
 res://Global.gd
 res://Scripts/box.gd
+res://Scenes/star.tscn
+res://Scripts/star.gd

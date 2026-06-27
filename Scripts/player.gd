@@ -54,3 +54,5 @@ func _physics_process(delta: float) -> void:
 		temp = delta * speed.length()
 		ball.global_rotate(Vector3.UP.cross(speed.normalized()),temp / radius)
 	move_and_slide()
+	for i in get_slide_collision_count():
+		(func(c): if c is RigidBody3D: c.apply_central_impulse(-get_slide_collision(i).get_normal() * 5.0)).call(get_slide_collision(i).get_collider())

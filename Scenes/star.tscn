@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b4jxrgk6q6vwp"]
+
+[ext_resource type="Script" uid="uid://bmll7im1vmaw6" path="res://Scripts/star.gd" id="1_d0spr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3vu41"]
+radius = 0.2784589
+
+[sub_resource type="TextMesh" id="TextMesh_fwpdb"]
+text = " ★"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a88l"]
+albedo_color = Color(5.248, 5.248, 0, 1)
+
+[node name="Star" type="Area3D" unique_id=751081141]
+script = ExtResource("1_d0spr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1635439584]
+shape = SubResource("SphereShape3D_3vu41")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=509662197]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.09044683, 0.092115045, -0.03739229)
+mesh = SubResource("TextMesh_fwpdb")
+material = SubResource("StandardMaterial3D_1a88l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

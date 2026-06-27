@@ -1,8 +1,9 @@
+CSGMesh3D
+CollisionShape3D
+Area3D
 CSGBox3D
 RigidBody3D
-Area3D
 CharacterBody3D
-CollisionShape3D
 Node3D
 AnimatableBody3D
 CSGCylinder3D
