@@ -1,10 +1,10 @@
 extends CharacterBody3D
 
 const radius = 0.5
-const SPEED = 10
+const SPEED = 12
 var temp = 0
 var free = false
-const JUMP_VELOCITY = 10
+const JUMP_VELOCITY = 11
 @onready var neck: SpringArm3D = $SpringArm3D
 @onready var ball: Node3D = $Ball
 @onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
