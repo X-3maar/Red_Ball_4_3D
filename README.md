@@ -6,4 +6,4 @@ controls are pretty simple, WASD to roll, space to jump.
 ## How to play
 Just collect the coins push boxes so you can jump on them and reach higher places, avoid falling in water, the square enemy currently does nothing but avoid touching him in the future.
 ## Engine
-This game was made usin godot game engine, the assets and audio are downloaded from public resources like www.spriters-resource.com.
+This game was made usin godot game engine, the assets and audio are downloaded from public resources like www.spriters-resource.com, all the 3d instances are made manually using CSGs.
