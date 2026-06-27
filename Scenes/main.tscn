@@ -49,6 +49,7 @@ albedo_color = Color(0, 0.7921569, 1, 0)
 metallic = 1.0
 roughness = 0.0
 refraction_enabled = true
+refraction_scale = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hptm8"]
 albedo_color = Color(0.101960786, 0.76862746, 0.9098039, 0)
@@ -531,6 +532,28 @@ theme_override_font_sizes/font_size = 64
 text = "0"
 script = ExtResource("5_21xkr")
 
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=857091238]
+offset_left = 42.0
+offset_top = 38.0
+offset_right = 116.0
+offset_bottom = 110.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Button" unique_id=2111816219]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 226.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("4_jjvhh")
+theme_override_font_sizes/font_size = 64
+text = "II"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=414430151]
+visible = false
+offset_right = 1161.0
+offset_bottom = 661.0
+color = Color(0, 0, 0, 0.49019608)
+
 [node name="Star" parent="." unique_id=751081141 instance=ExtResource("5_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.122364, 46.420822)
 
@@ -562,3 +585,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.179455, 175.99496)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.215381, 450.69376)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/Button" to="RB" method="_on_button_pressed"]

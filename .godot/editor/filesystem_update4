@@ -10,3 +10,4 @@ res://Scripts/killzone.gd
 res://Global.gd
 res://Scenes/flag.tscn
 res://Scripts/flag.gd
+res://Scenes/enemy.tscn

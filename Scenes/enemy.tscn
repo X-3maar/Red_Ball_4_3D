@@ -1,3 +1,100 @@
 [gd_scene format=3 uid="uid://b3taw7k0iihjg"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne65n"]
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.36
+
 [node name="enemy" type="CharacterBody3D" unique_id=1408691430]
+
+[node name="Body" type="Node3D" parent="." unique_id=900829278]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Body" unique_id=892144438]
+material = SubResource("StandardMaterial3D_ne65n")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Body" unique_id=1875025175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1035156e-05, 0.00010681152, 0.4941523)
+size = Vector3(0.9893799, 0.9590149, 0.07312012)
+material = SubResource("StandardMaterial3D_ne65n")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Body" unique_id=826845774]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.494, 0, 0)
+size = Vector3(0.9893799, 0.9590149, 0.07312012)
+material = SubResource("StandardMaterial3D_ne65n")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Body" unique_id=1539337135]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.494, 0, 0)
+size = Vector3(0.9893799, 0.9590149, 0.07312012)
+material = SubResource("StandardMaterial3D_ne65n")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Body" unique_id=1486793714]
+transform = Transform3D(-4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.00094299315, 0.4733122, -0.4840137)
+height = 9.970886
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Body" unique_id=1207271013]
+transform = Transform3D(-4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.001, 0.473, 0.484)
+height = 9.970886
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Body" unique_id=838767239]
+transform = Transform3D(1.9106854e-16, 4.371139e-09, 0.1, 0.1, -4.371139e-09, 0, 4.371139e-09, 0.1, -4.371139e-09, 0.484, 0.473, 0)
+height = 9.970886
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Body" unique_id=1069528951]
+transform = Transform3D(1.9106854e-16, 4.371139e-09, 0.1, 0.1, -4.371139e-09, 0, 4.371139e-09, 0.1, -4.371139e-09, -0.484, 0.473, 0)
+height = 9.970886
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Body" unique_id=1679318715]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.49064007, 0.47512817, 0.4857227)
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Body" unique_id=436358531]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.491, 0.475, 0.486)
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="Body" unique_id=1955193907]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.491, 0.475, -0.486)
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="Body" unique_id=2082388131]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.491, 0.475, -0.486)
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Body" unique_id=1730353490]
+transform = Transform3D(-4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.00094299315, -0.473, -0.4840137)
+height = 9.970886
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="Body" unique_id=1671972111]
+transform = Transform3D(-0.1, 8.742278e-09, 0, -8.742278e-09, -0.1, 0, 0, 0, 0.1, -0.48662788, 0.011534427, -0.4840137)
+height = 9.253021
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="Body" unique_id=1492433466]
+transform = Transform3D(-0.1, 8.742278e-09, 0, -8.742278e-09, -0.1, 0, 0, 0, 0.1, 0.487, 0.012, -0.484)
+height = 9.253021
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="Body" unique_id=629109904]
+transform = Transform3D(-0.1, 8.742278e-09, 0, -8.742278e-09, -0.1, 0, 0, 0, 0.1, 0.487, 0.012, 0.484)
+height = 9.253021
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Body" unique_id=1338269872]
+transform = Transform3D(-0.1, 8.742278e-09, 0, -8.742278e-09, -0.1, 0, 0, 0, 0.1, -0.487, 0.012, 0.484)
+height = 9.253021
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Body" unique_id=863481394]
+transform = Transform3D(-4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.001, -0.473, 0.484)
+height = 9.970886
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Body" unique_id=2025275801]
+transform = Transform3D(1.9106854e-16, 4.371139e-09, 0.1, 0.1, -4.371139e-09, 0, 4.371139e-09, 0.1, -4.371139e-09, 0.484, -0.473, 0)
+height = 9.970886
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="Body" unique_id=1221789054]
+transform = Transform3D(1.9106854e-16, 4.371139e-09, 0.1, 0.1, -4.371139e-09, 0, 4.371139e-09, 0.1, -4.371139e-09, -0.484, -0.473, 0)
+height = 9.970886
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="Body" unique_id=1824810781]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.49064007, -0.473, 0.4857227)
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="Body" unique_id=1195032538]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.491, -0.473, 0.486)
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="Body" unique_id=954524431]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.491, -0.473, -0.486)
+
+[node name="CSGSphere3D8" type="CSGSphere3D" parent="Body" unique_id=397366511]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.491, -0.473, -0.486)
