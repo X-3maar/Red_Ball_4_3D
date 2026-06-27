@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Red_Ball_4_3D"
-run/main_scene="uid://ct7o17b0hxw4d"
+run/main_scene="uid://bjtrw23n8hmxh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*uid://bo1qolpb3h6mw"
+Bgm1="*uid://du5dnvo101ayn"
+Bgm2="*uid://dpl3ftld6a1mf"
 
 [editor_plugins]
 

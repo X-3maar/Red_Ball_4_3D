@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpl3ftld6a1mf"]
+
+[ext_resource type="AudioStream" uid="uid://cie3h3hekiluj" path="res://Assets/03. Green Hills.mp3" id="1_q7wn3"]
+
+[node name="BGM2" type="AudioStreamPlayer3D" unique_id=875866973]
+stream = ExtResource("1_q7wn3")

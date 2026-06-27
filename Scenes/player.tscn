@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bem5vdrbmlvaq"]
 
 [ext_resource type="Script" uid="uid://4ln454j8sgay" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="AudioStream" uid="uid://i0182aces2ge" path="res://Assets/pl_jump1.wav" id="2_cvnsp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
 
@@ -81,3 +82,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6t5aa")
 [node name="Body" type="MeshInstance3D" parent="Ball" unique_id=1761193150]
 mesh = SubResource("SphereMesh_f60y1")
 surface_material_override/0 = SubResource("StandardMaterial3D_v0iea")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2098286509]
+stream = ExtResource("2_cvnsp")

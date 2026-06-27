@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdtu70wfh8vun"]
 
 [ext_resource type="Script" uid="uid://dhofldmi1sbad" path="res://Scripts/flag.gd" id="1_snk6q"]
+[ext_resource type="AudioStream" uid="uid://dor5c7i5s3vwl" path="res://Assets/checkpoint.wav" id="2_vie08"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gplfj"]
 albedo_color = Color(0.5985586, 0.22686666, 0, 1)
@@ -82,5 +83,8 @@ shape = SubResource("CapsuleShape3D_cnecg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1183790127]
 libraries/ = SubResource("AnimationLibrary_cnecg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1112445395]
+stream = ExtResource("2_vie08")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

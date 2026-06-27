@@ -1,2 +1,14 @@
 res://Scenes/enemy.tscn
 res://Scenes/main.tscn
+res://Scripts/killzone.gd
+res://Scenes/menu.tscn
+res://Scripts/menu.gd
+res://Scripts/player.gd
+res://Scenes/player.tscn
+res://Scenes/bgm_2.tscn
+res://Scenes/star.tscn
+res://Scripts/star.gd
+res://Scenes/flag.tscn
+res://Scripts/flag.gd
+res://default_bus_layout.tres
+res://Scenes/bgm_1.tscn

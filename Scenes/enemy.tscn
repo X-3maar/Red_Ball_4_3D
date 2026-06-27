@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://b3taw7k0iihjg"]
 
-[ext_resource type="Script" uid="uid://d1xksgobfqj38" path="res://Scripts/killzone.gd" id="1_hghv2"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne65n"]
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.36
@@ -283,7 +281,6 @@ transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -0.29826495, -0.3463
 [node name="Area3D" type="Area3D" parent="." unique_id=2064996077]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_hghv2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1462591728]
 transform = Transform3D(10.7, 0, 0, 0, 10.7, 0, 0, 0, 10.7, 0, 0, 0)
