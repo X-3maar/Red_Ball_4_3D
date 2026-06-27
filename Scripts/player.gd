@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var speed := Vector3(velocity.x,0,velocity.z)
 	dir = dir.move_toward(direction,10.0*delta)
-	if dir:
+	if dir :
 
 		
 		velocity.x = move_toward(velocity.x,dir.x * SPEED, 20.0 * delta)

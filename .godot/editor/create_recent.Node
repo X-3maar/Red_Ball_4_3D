@@ -1,3 +1,5 @@
+CollisionShape3D
+Area3D
 CSGSphere3D
 CSGCylinder3D
 CSGBox3D
@@ -5,9 +7,7 @@ Node3D
 ColorRect
 Button
 AnimationPlayer
-CollisionShape3D
 CSGPolygon3D
-Area3D
 Label
 CanvasLayer
 CSGMesh3D
