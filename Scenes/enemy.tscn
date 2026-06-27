@@ -6,6 +6,12 @@
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.36
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_287tu"]
+albedo_color = Color(0.03529412, 0.12156863, 0.14117648, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0830c"]
+albedo_color = Color(0.03529412, 0.12156863, 0.14117648, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hghv2"]
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.36
@@ -43,41 +49,40 @@ use_collision = true
 size = Vector3(0.9893799, 0.9590149, 0.07312012)
 material = SubResource("StandardMaterial3D_ne65n")
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=1590287968]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2875557, -0.25868386, 0)
+[node name="CSGBox3D9" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=1173341122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21457581, 0)
 operation = 2
-size = Vector3(0.093315125, 0.23644853, 0.07312012)
+use_collision = true
+size = Vector3(0.77734375, 0.31988716, 0.07312012)
 material = SubResource("StandardMaterial3D_ne65n")
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=336326833]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32170162, -0.25801495, 0)
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Body/CSGBox3D5" unique_id=719018149]
+transform = Transform3D(0.1, 0, 0, 0, 0.10000001, 0, 0, 0, 0.1, -0.38925648, -0.05846269, 0.083595216)
 operation = 2
-size = Vector3(0.093315125, 0.24535799, 0.07312012)
-material = SubResource("StandardMaterial3D_ne65n")
+polygon = PackedVector2Array(-0.017737389, -1.6795154, -0.019122839, 0.7869433, 4.6078844, 0.18337464)
+depth = 2.11
+material = SubResource("StandardMaterial3D_287tu")
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=1746705834]
-transform = Transform3D(0.12592189, 0.9920403, 0, -0.9920403, 0.12592189, 0, 0, 0, 1, 0.12636448, -0.20198956, 0)
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Body/CSGBox3D5" unique_id=1360461658]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.10000001, 0, 8.742278e-09, 0, -0.1, 0.38899997, -0.058, -0.08014801)
 operation = 2
-size = Vector3(0.093315125, 0.3596158, 0.07312012)
-material = SubResource("StandardMaterial3D_ne65n")
+polygon = PackedVector2Array(0.039883852, -1.2866539, -0.019122839, 0.7869433, 4.1664357, 0.20829168)
+depth = 2.99
+material = SubResource("StandardMaterial3D_287tu")
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=1046203777]
-transform = Transform3D(0.12533325, -0.9921148, 0, 0.9921149, 0.12533325, 0, 0, 0, 1, -0.089865565, -0.20651293, 0)
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Body/CSGBox3D5" unique_id=592111089]
+transform = Transform3D(0.1, -8.742278e-09, 8.742278e-09, -8.74228e-09, -0.10000001, 0, 8.742278e-09, -7.642743e-16, -0.1, -0.38667825, -0.33320987, -0.08014801)
 operation = 2
-size = Vector3(0.093315125, 0.34069657, 0.07312012)
-material = SubResource("StandardMaterial3D_ne65n")
+polygon = PackedVector2Array(-0.032037735, -1.347888, -0.019122839, 0.7869433, 4.2931333, 0.29663754)
+depth = 2.99
+material = SubResource("StandardMaterial3D_0830c")
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=135855024]
-transform = Transform3D(-0.13571547, -0.99074805, 0, 0.99074805, -0.13571547, 0, 0, 0, 1, -0.118485704, -0.28448448, 0)
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Body/CSGBox3D5" unique_id=735731360]
+transform = Transform3D(-0.1, -8.742278e-09, 0, 8.742279e-09, -0.10000001, 0, 0, 0, 0.1, 0.387, -0.33300003, 0.2468388)
 operation = 2
-size = Vector3(0.14942741, 0.3525374, 0.07312012)
-material = SubResource("StandardMaterial3D_ne65n")
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="Body/CSGBox3D5" unique_id=583402058]
-transform = Transform3D(-0.13571565, 0.9907479, 0, -0.9907479, -0.13571565, 0, 0, 0, 1, 0.11889001, -0.28190243, 0)
-operation = 2
-size = Vector3(0.15369987, 0.3525374, 0.07312012)
-material = SubResource("StandardMaterial3D_ne65n")
+polygon = PackedVector2Array(-0.032037735, -1.347888, -0.019122839, 0.7869433, 4.2931333, 0.29663754)
+depth = 2.99
+material = SubResource("StandardMaterial3D_0830c")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Body" unique_id=826845774]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.494, 0, 0)
@@ -91,14 +96,14 @@ use_collision = true
 size = Vector3(0.9767151, 0.9590149, 0.07312012)
 material = SubResource("StandardMaterial3D_ne65n")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="Body" unique_id=99075482]
-transform = Transform3D(-1.0880186e-08, -0.9685268, 0.24890962, -4.2335653e-08, 0.24890962, 0.9685268, -1, 0, -4.3711392e-08, -0.24717183, 0.28177333, -0.2706724)
+[node name="CSGBox3D8" type="CSGBox3D" parent="Body" unique_id=1867145806]
+transform = Transform3D(-4.3711392e-08, 0.93731576, 0.2799574, 0, 0.24066181, -1.090362, -1, -4.0971372e-08, -1.2237327e-08, 0.25598714, 0.30535826, -0.29964566)
 use_collision = true
 size = Vector3(0.6433487, 0.37001038, 0.07312012)
 material = SubResource("StandardMaterial3D_ne65n")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="Body" unique_id=1867145806]
-transform = Transform3D(-4.3711392e-08, 0.9685832, 0.24868993, 0, 0.24868993, -0.9685832, -1, -4.2338115e-08, -1.0870583e-08, 0.24700001, 0.25405622, -0.271)
+[node name="CSGBox3D9" type="CSGBox3D" parent="Body" unique_id=112499271]
+transform = Transform3D(-4.3711392e-08, -0.93731576, 0.27995744, 0, 0.24066184, 1.090362, -1, 4.0971376e-08, -1.22373285e-08, -0.256, 0.32442823, -0.3)
 use_collision = true
 size = Vector3(0.6433487, 0.37001038, 0.07312012)
 material = SubResource("StandardMaterial3D_ne65n")
@@ -144,26 +149,30 @@ use_collision = true
 material = SubResource("StandardMaterial3D_hghv2")
 
 [node name="CSGSphere3D9" type="CSGSphere3D" parent="Body" unique_id=1423917389]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.22863562, 0.16380492, -0.4764456)
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -0.22863562, 0.16380492, -0.4764456)
 use_collision = true
 radius = 1.302245
+radial_segments = 15
+rings = 20
 material = SubResource("StandardMaterial3D_1f0kj")
 
 [node name="CSGSphere3D11" type="CSGSphere3D" parent="Body/CSGSphere3D9" unique_id=1354543805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06330466, 0.1402173, -0.5047641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06330466, 0.19361794, -0.50476384)
 radius = 0.8230617
 radial_segments = 20
 rings = 20
 material = SubResource("StandardMaterial3D_afpow")
 
 [node name="CSGSphere3D10" type="CSGSphere3D" parent="Body" unique_id=1326385287]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.229, 0.164, -0.476)
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0.229, 0.18216062, -0.47600004)
 use_collision = true
 radius = 1.302245
+radial_segments = 15
+rings = 20
 material = SubResource("StandardMaterial3D_1f0kj")
 
 [node name="CSGSphere3D11" type="CSGSphere3D" parent="Body/CSGSphere3D10" unique_id=2138745168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026130438, 0.008170128, -0.5047641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026130557, 0.06411803, -0.5232613)
 radius = 0.8230617
 radial_segments = 20
 rings = 20
@@ -247,37 +256,29 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.491, -0.473, -0.486)
 use_collision = true
 material = SubResource("StandardMaterial3D_hghv2")
 
-[node name="CSGSphere3D11" type="CSGSphere3D" parent="Body" unique_id=1193326698]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, -0.24709545, -0.17137335, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D11" type="CSGSphere3D" parent="Body" unique_id=411430813]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -0.27418765, -0.05830413, -0.46633133)
 
-[node name="CSGSphere3D12" type="CSGSphere3D" parent="Body" unique_id=897092437]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, -0.08046793, -0.17467539, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D12" type="CSGSphere3D" parent="Body" unique_id=386057646]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -0.078830145, -0.07863938, -0.46633133)
 
-[node name="CSGSphere3D13" type="CSGSphere3D" parent="Body" unique_id=1775779558]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, 0.121971585, -0.17182766, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D13" type="CSGSphere3D" parent="Body" unique_id=1551710769]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, 0.13016549, -0.07306209, -0.46633133)
 
-[node name="CSGSphere3D14" type="CSGSphere3D" parent="Body" unique_id=5324634]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, 0.2969167, -0.1530392, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D14" type="CSGSphere3D" parent="Body" unique_id=543514566]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, 0.30553922, -0.048492532, -0.46633133)
 
-[node name="CSGSphere3D15" type="CSGSphere3D" parent="Body" unique_id=1965281137]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, 0.2969167, -0.3682553, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D15" type="CSGSphere3D" parent="Body" unique_id=1832975700]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, 0.29527292, -0.34449896, -0.46633133)
 
-[node name="CSGSphere3D16" type="CSGSphere3D" parent="Body" unique_id=1346641015]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, 0.11052375, -0.34656832, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D16" type="CSGSphere3D" parent="Body" unique_id=944694756]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, 0.10547521, -0.32554227, -0.46633133)
 
-[node name="CSGSphere3D17" type="CSGSphere3D" parent="Body" unique_id=734702268]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, -0.09019356, -0.3436657, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D17" type="CSGSphere3D" parent="Body" unique_id=537675664]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -0.11825595, -0.3225108, -0.46633133)
 
-[node name="CSGSphere3D18" type="CSGSphere3D" parent="Body" unique_id=870640853]
-transform = Transform3D(0.12, 0, 0, 0, 0.18, 0, 0, 0, 0.15, -0.25789005, -0.36981806, -0.45868358)
-use_collision = true
+[node name="CSGSphere3D18" type="CSGSphere3D" parent="Body" unique_id=1553160538]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -0.29826495, -0.34638032, -0.46633133)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=2064996077]
 collision_layer = 4
