@@ -6,45 +6,15 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_3vu41"]
 radius = 0.2784589
 
-[sub_resource type="TextMesh" id="TextMesh_fwpdb"]
-text = "★"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a88l"]
-albedo_color = Color(5.248, 5.248, 0, 1)
-
 [sub_resource type="Animation" id="Animation_d0spr"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CSGMesh3D:position")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.09044683, 0.092115045, -0.03739229)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CSGMesh3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -70,30 +40,6 @@ tracks/0/keys = {
 resource_name = "rotating"
 length = 2.0
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGMesh3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.092, 0), Vector3(0, 0.25, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CSGMesh3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fwpdb"]
 _data = {
@@ -101,6 +47,9 @@ _data = {
 &"fade": SubResource("Animation_fwpdb"),
 &"rotating": SubResource("Animation_3vu41")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vu41"]
+albedo_color = Color(18.892, 15.23, 0, 1)
 
 [node name="Star" type="Area3D" unique_id=751081141]
 transform = Transform3D(0.6235548, 0, -0.7817796, 0, 1, 0, 0.7817796, 0, 0.6235548, 0, 0, 0)
@@ -111,16 +60,29 @@ script = ExtResource("1_d0spr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1635439584]
 shape = SubResource("SphereShape3D_3vu41")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=509662197]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.09044683, 0.092115045, -0.03739229)
-mesh = SubResource("TextMesh_fwpdb")
-material = SubResource("StandardMaterial3D_1a88l")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1862842012]
 libraries/ = SubResource("AnimationLibrary_fwpdb")
 autoplay = &"rotating"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1563187310]
 stream = ExtResource("2_3vu41")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1102363856]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.28503504, 0)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Node3D" unique_id=481743795]
+transform = Transform3D(0.09999998, 0, 0, 0, 0.1, 0, 0, 0, 0.09999998, -0.0031758016, 0.053628594, 0.02858378)
+polygon = PackedVector2Array(-0.921335, -0.46111614, -0.3638979, 0.5555429, -0.0059534386, 1.595612, 0.2896325, 0.63071746)
+material = SubResource("StandardMaterial3D_3vu41")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Node3D" unique_id=1738275145]
+transform = Transform3D(0.09999998, 0, 0, 0, 0.1, 0, 0, 0, 0.09999998, -0.0031757997, 0.05296199, 0.02858378)
+polygon = PackedVector2Array(-0.9169473, 0.9061478, -0.15793282, 0.92564654, 0.008623883, 0.7003946, 0.77717924, -0.44185603)
+material = SubResource("StandardMaterial3D_3vu41")
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Node3D" unique_id=730052459]
+transform = Transform3D(0.09999998, 0, 0, 0, 0.1, 0, 0, 0, 0.09999998, -0.0031757997, 0.05296199, 0.02858378)
+polygon = PackedVector2Array(-0.9169473, 0.9061478, 0.9209629, 0.9049591, 0.26925355, 0.5271338, 0.77717924, -0.44185603)
+material = SubResource("StandardMaterial3D_3vu41")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

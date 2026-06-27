@@ -1,3 +1,7 @@
+CharacterBody3D
+Node3D
+CSGPolygon3D
+CSGSphere3D
 AudioStreamPlayer
 AudioListener3D
 AudioStreamPlayer3D
@@ -9,6 +13,3 @@ Button
 Camera3D
 AnimatedSprite3D
 Sprite3D
-AnimationPlayer
-CSGSphere3D
-CSGPolygon3D
