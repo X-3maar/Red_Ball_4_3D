@@ -1,8 +1,10 @@
 extends Area3D
 
+@onready var rb: CharacterBody3D = $"../RB"
 
 
 
 
 func _on_body_entered(body: Node3D) -> void:
-	get_tree().reload_current_scene()
+	rb.global_position = Global.check 
+	

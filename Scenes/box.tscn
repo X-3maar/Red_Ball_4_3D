@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://birbidoc72iy3" path="res://Scripts/box.gd" id="1_xkb4e"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xkb4e"]
+friction = 2.0
+rough = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6ket"]
 albedo_color = Color(0.74509805, 0.52156866, 0.2627451, 1)
 
@@ -9,6 +13,10 @@ albedo_color = Color(0.74509805, 0.52156866, 0.2627451, 1)
 size = Vector3(1, 0.97558594, 1)
 
 [node name="RigidBody3D" type="RigidBody3D" unique_id=607046528]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_xkb4e")
 script = ExtResource("1_xkb4e")
 
 [node name="Body" type="Node3D" parent="." unique_id=602404651]

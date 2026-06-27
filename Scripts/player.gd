@@ -4,6 +4,8 @@ const radius = 0.5
 const SPEED = 12
 var temp = 0
 var free = false
+var collider
+var collision
 const JUMP_VELOCITY = 11
 @onready var neck: SpringArm3D = $SpringArm3D
 @onready var ball: Node3D = $Ball
@@ -42,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if dir:
 
 		
-		velocity.x = move_toward(velocity.x,dir.x * SPEED, 20.0 * delta) 
+		velocity.x = move_toward(velocity.x,dir.x * SPEED, 20.0 * delta)
 
 
 		velocity.z = move_toward(velocity.z,dir.z * SPEED, 20.0 * delta)
@@ -55,4 +57,7 @@ func _physics_process(delta: float) -> void:
 		ball.global_rotate(Vector3.UP.cross(speed.normalized()),temp / radius)
 	move_and_slide()
 	for i in get_slide_collision_count():
-		(func(c): if c is RigidBody3D: c.apply_central_impulse(-get_slide_collision(i).get_normal() * 5.0)).call(get_slide_collision(i).get_collider())
+		collision = get_slide_collision(i)
+		collider = collision.get_collider()
+		if collider is RigidBody3D:
+			collider.apply_central_impulse(-collision.get_normal() * 5.0)

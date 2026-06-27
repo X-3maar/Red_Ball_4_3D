@@ -6,12 +6,77 @@
 radius = 0.2784589
 
 [sub_resource type="TextMesh" id="TextMesh_fwpdb"]
-text = " ★"
+text = "★"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a88l"]
 albedo_color = Color(5.248, 5.248, 0, 1)
 
+[sub_resource type="Animation" id="Animation_d0spr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGMesh3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.09044683, 0.092115045, -0.03739229)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGMesh3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3vu41"]
+resource_name = "rotating"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGMesh3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.092, 0), Vector3(0, 0.25, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGMesh3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fwpdb"]
+_data = {
+&"RESET": SubResource("Animation_d0spr"),
+&"rotating": SubResource("Animation_3vu41")
+}
+
 [node name="Star" type="Area3D" unique_id=751081141]
+transform = Transform3D(0.6235549, 0, -0.7817796, 0, 1, 0, 0.7817796, 0, 0.6235549, 0, 0, 0)
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_d0spr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1635439584]
@@ -21,5 +86,9 @@ shape = SubResource("SphereShape3D_3vu41")
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.09044683, 0.092115045, -0.03739229)
 mesh = SubResource("TextMesh_fwpdb")
 material = SubResource("StandardMaterial3D_1a88l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1862842012]
+libraries/ = SubResource("AnimationLibrary_fwpdb")
+autoplay = &"rotating"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

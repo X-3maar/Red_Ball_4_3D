@@ -1,9 +1,14 @@
-CSGMesh3D
+AnimationPlayer
 CollisionShape3D
+CSGPolygon3D
+CSGSphere3D
+CSGCylinder3D
+Node3D
 Area3D
+Label
+CanvasLayer
+CSGMesh3D
 CSGBox3D
 RigidBody3D
 CharacterBody3D
-Node3D
 AnimatableBody3D
-CSGCylinder3D
