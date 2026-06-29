@@ -1,5 +1,7 @@
 # Red_Ball_4_3D
 Red Ball 4 was a really funny game that I loved as a child, so I made a 3d version of it with the exact same details in each level.
+For those who didn't play red ball 4 before, it is a 2d platformer game where you are trying to kill enemies, jump over platforms and explore other worlds.
+I think it wouldd be a good idea to play this funny game with better graphics so that's why i made this game.
 The current version only has 2 levels of the real game and not that perfect ui but this will be done in next updates.
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/02f6c539-e0b4-4bf6-a704-c946639fa1e5" />
 controls are pretty simple, WASD to roll, space to jump.
