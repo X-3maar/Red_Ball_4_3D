@@ -11,6 +11,10 @@ Just collect the coins push boxes so you can jump on them and reach higher place
 This game was made usin godot game engine, the assets and audio are downloaded from public resources like www.spriters-resource.com, all the 3d instances are made manually using CSGs.
 ## Level 1
 This level starts with stairs, go up the stairs and you then you will find the bridge. cross this bridge to reach the final part of the level. In this part you will have to push the box backwards to be able to jump on it and reach the checkpoint of level 2.
+<img width="1122" height="616" alt="Screenshot from 2026-06-29 17-23-35" src="https://github.com/user-attachments/assets/14c30bb9-db7d-44c6-a644-92a57f3ea5d8" />
+
 ## Level 2
 This level starts with some cliffs that are different in height, to reach the top of the second cliff, you will have to jump off the first cliff. and after passing this part you will find a lake at the bottom so make sure not to fall.
+<img width="1122" height="616" alt="image" src="https://github.com/user-attachments/assets/3226951d-4a1f-46e8-b093-4bf2ef4623cc" />
+
 
