@@ -7,3 +7,8 @@ controls are pretty simple, WASD to roll, space to jump.
 Just collect the coins push boxes so you can jump on them and reach higher places, avoid falling in water, the square enemy currently does nothing but avoid touching him in the future.
 ## Engine
 This game was made usin godot game engine, the assets and audio are downloaded from public resources like www.spriters-resource.com, all the 3d instances are made manually using CSGs.
+## Level 1
+This level starts with stairs, go up the stairs and you then you will find the bridge. cross this bridge to reach the final part of the level. In this part you will have to push the box backwards to be able to jump on it and reach the checkpoint of level 2.
+## Level 2
+This level starts with some cliffs that are different in height, to reach the top of the second cliff, you will have to jump off the first cliff. and after passing this part you will find a lake at the bottom so make sure not to fall.
+
